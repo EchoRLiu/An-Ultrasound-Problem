@@ -1,18 +1,23 @@
 # An Ultrosound Problem
 
 **Abstract**
+
 Most of the time, data set comes with noise, covering the true information we hope to extract. For instance, when analyzing ultrasound information, the real signal is always buried somewhere. Here, we present two steps to denoise the data and detect the locations of certain moving object. The first step is to take the average of Fourier transform of the data through realizations. Doing this in frequency domain instead of spatial domain is because the movement of the object in spatial domain would obscure the result, but instead, in frequency domain, since the frequency of the object is fixed, through averaging, we would not add noise to the data. This would also give us the center frequency of the object, which would be used in the second step to clean the data further. The second step is to use Gaussian filter to filter the data in the frequency domain, and get the location of the object through the inverse Fourier transform of the filtered result.
 
 **Introduction and Overview**
+
 Here, we use the following example problem to illustrate how Fourier transform can be used to denoise the data and locate the object of interest.
 
 **Problem Description**
+
 In this example problem, our dog swallowed a marble by accident. Through ultrasound around the area we suspect the marble would be, we obtain 20 realizations of the spatial domain data of the marble locations. But as always, other signals in the environment and the movement of our dog would generate highly noise in our data. In addition, through realization, the marble would also be moving, which adds difficulty in denoising our data.
 
 **General Approach**
+
 Considering the movement of the marble through realizations, we can not simply denoise the data by averaging the spatial domain data (we assume the noise would be white noise, i.e. they are independent normal distribution, and if we average them, the mean should be zero). Thus, we first obtain the Fourier transform of the data, which represents all frequencies we have in the data. We then average the frequency domain data, to extract the center frequency, with which we can further denoise the data. Using 3-D Gaussian filter around the center frequency, we are able to clean up the data. The last step would be to use inverse Fourier transform to obtain the location of the marble.
 
 **Theoretical Background**
+
 As we learned from our [textbook](https://faculty.washington.edu/kutz/582.pdf), Fourier introduced the concept of representing a given function f(x) by a trigonometric series of sines and cosines:
 
     $f(x) = \frac{a_0}{2} + \sum_{i=1}^\infty \left(a_n\cos{nx} + b_n\sin{nx}\right) \quad x \in (-\pi,\pi]$
@@ -95,4 +100,5 @@ After filtering, we can clearly see the marble's moving path as in Figure 5. A s
 Finally, in the 20th realization, the position of marble we obtained is $x = -5.6250, y = 4.2188, z = -6.0938$, which is the location where the intense acoustic wave should be focused.
 
 **Summary and Conclusions**
+
 Through this example problem, we can see how useful Fourier transform is for signal analysis and noise attenuation. Fourier transform is an amazing tool that makes it possible for us to separate mixed signals and analyze individually.
