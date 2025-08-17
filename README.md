@@ -1,4 +1,4 @@
-# An Ultrosound Problem
+# An Ultrasound Problem
 
 **Abstract**
 
@@ -80,22 +80,22 @@ We then try to use 3D Gaussian filter to further clean the data using Algotithm 
 
 At first, the data is very noisy. Figure 1 is an example of the realizations in the spatial domain, and Figure 2 is one in the frequency domain.
     
-![figure 1](https://github.com/EchoRLiu/An-Ultrosound-Problem-/blob/master/noisydata1.jpg)
+![figure 1](https://github.com/EchoRLiu/An-Ultrasound-Problem-/blob/master/noisydata1.jpg)
     
-![figure 2](https://github.com/EchoRLiu/An-Ultrosound-Problem-/blob/master/noisydata2.jpg)
+![figure 2](https://github.com/EchoRLiu/An-Ultrasound-Problem-/blob/master/noisydata2.jpg)
     
 After we average the frequency domain data, we can see in Figure 3, the result seems less noisy compared to Figure 2. We can also notice the center frequency is near $\omega_x = 1.89, \omega_y = -1.05, \omega_z = 0.0$.
     
-![figure 3](https://github.com/EchoRLiu/An-Ultrosound-Problem-/blob/master/averagedWN2.jpg)
+![figure 3](https://github.com/EchoRLiu/An-Ultrasound-Problem-/blob/master/averagedWN2.jpg)
 
 To compare the results between averaged spatial and frequency domains, see Figure 4.
 
-![figure 4](https://github.com/EchoRLiu/An-Ultrosound-Problem-/blob/master/averagedWN1.jpg)
+![figure 4](https://github.com/EchoRLiu/An-Ultrasound-Problem-/blob/master/averagedWN1.jpg)
     
 After filtering, we can clearly see the marble's moving path as in Figure 5. A simple path is also presented here in Figure 6.
     
-![figure 5](https://github.com/EchoRLiu/An-Ultrosound-Problem-/blob/master/marbles.jpg)
-![figure 6](https://github.com/EchoRLiu/An-Ultrosound-Problem-/blob/master/marblepath.jpg)
+![figure 5](https://github.com/EchoRLiu/An-Ultrasound-Problem-/blob/master/marbles.jpg)
+![figure 6](https://github.com/EchoRLiu/An-Ultrasound-Problem-/blob/master/marblepath.jpg)
     
 Finally, in the 20th realization, the position of marble we obtained is $x = -5.6250, y = 4.2188, z = -6.0938$, which is the location where the intense acoustic wave should be focused.
 
